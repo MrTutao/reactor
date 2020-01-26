@@ -8,7 +8,7 @@ Starting from 3.0, Reactor is now organized into multiple projects:
 
 ![Reactor Project](https://raw.githubusercontent.com/reactor/projectreactor.io/master/src/main/static/assets/img/org3.png)
 
-A set of compatible versions for all these projects is curated under a BOM ("Bill of Material").
+A set of compatible versions for all these projects is curated under a BOM ("Bill of Materials").
 
 ## Using the BOM with Maven
 In Maven, you need to import the bom first:
@@ -19,7 +19,7 @@ In Maven, you need to import the bom first:
         <dependency>
             <groupId>io.projectreactor</groupId>
             <artifactId>reactor-bom</artifactId>
-            <version>Californium-RELEASE</version>
+            <version>Dysprosium-SR4</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
@@ -52,7 +52,7 @@ your project without a version number.
 ```groovy
 dependencies {
      // import BOM
-     implementation platform('io.projectreactor:reactor-bom:Californium-SR3')
+     implementation platform('io.projectreactor:reactor-bom:Dysprosium-SR4')
 
      // add dependencies without a version number
      implementation 'io.projectreactor:reactor-core'
@@ -74,7 +74,7 @@ Then use it to import the BOM:
 ```groovy
 dependencyManagement {
      imports {
-          mavenBom "io.projectreactor:reactor-bom:Californium-SR3"
+          mavenBom "io.projectreactor:reactor-bom:Dysprosium-SR4"
      }
 }
 ```
@@ -99,6 +99,7 @@ So far, the release trains are named:
  - `Aluminium` for the `3.0.x` generation of Reactor-Core ([:bulb:](# 'aluminium is shiny, as is this brand new release'))
  - `Bismuth` for the `3.1.x` generation ([:bulb:](# 'intricate crystaline structure, a bit like this release'))
  - `Californium` for the `3.2.x` generation ([:bulb:](# 'made in California, can be used to help start up nuclear reactors... shoutout to our own @smaldini moving there'))
+ - `Dysprosium` for the `3.3.x` generation ([:bulb:](# 'means hard to get and is used in nuclear reactors'))
  
 
 # Enrolling
@@ -110,8 +111,8 @@ So far, the release trains are named:
 
 ### Documentation
 
-* [Guides](http://projectreactor.io/docs/)
-* [Reactive Streams](http://www.reactive-streams.org/)
+* [Guides](https://projectreactor.io/docs)
+* [Reactive Streams](https://www.reactive-streams.org/)
 
 ### Community / Support
 * [![Join the chat at https://gitter.im/reactor/reactor](	https://img.shields.io/gitter/room/reactor/reactor.svg)](https://gitter.im/reactor/reactor?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -122,16 +123,16 @@ So far, the release trains are named:
 ## Reactor Core
 [![Reactor Core](https://img.shields.io/badge/github-reactor/reactor--core-green.svg)](https://github.com/reactor/reactor-core)
 
-Reactive foundations for apps and frameworks and reactive extensions inspired API with [Mono](http://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html) (1 element) and [Flux](http://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html) (n elements) types
+Reactive foundations for apps and frameworks and reactive extensions inspired API with [Mono](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html) (1 element) and [Flux](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html) (n elements) types
 
- - API documentation: [/docs/core/release/api](http://projectreactor.io/docs/core/release/api)
+ - API documentation: [/docs/core/release/api](https://projectreactor.io/docs/core/release/api)
 
 ## Reactor Netty
 [![Reactor Netty](https://img.shields.io/badge/github-reactor/reactor--netty-green.svg)](https://github.com/reactor/reactor-netty)
 
 TCP and HTTP client and server.
 
- - API documentation: [/docs/netty/release/api](http://projectreactor.io/docs/netty/release/api)
+ - API documentation: [/docs/netty/release/api](https://projectreactor.io/docs/netty/release/api)
 
 ## Reactor Addons
 [![Reactor Addons](https://img.shields.io/badge/github-reactor/reactor--addons-green.svg)](https://github.com/reactor/reactor-addons)
@@ -139,9 +140,9 @@ TCP and HTTP client and server.
 Extra projects adding features to reactor:
 
   - **`reactor-adapter`**: adapt to/from various libraries, mainly RxJava 2.
-    - API documentation: [/docs/adapter/release/api](http://projectreactor.io/docs/adapter/release/api)
+    - API documentation: [/docs/adapter/release/api](https://projectreactor.io/docs/adapter/release/api)
   - **`reactor-extra`**: Retry utils, Math utils, ...
-    - API documentation: [/docs/test/release/api](http://projectreactor.io/docs/test/release/api)
+    - API documentation: [/docs/test/release/api](https://projectreactor.io/docs/test/release/api)
   - **`reactor-logback`**: `logback` adapter for Flux/Mono `log()` feature.
 
 
@@ -167,14 +168,14 @@ To add this repo to your Maven build, add it to the `<repositories>` section lik
 To add it to your Gradle build, use the `repositories` configuration like this:
 ```groovy
 repositories {
-	maven { url 'http://repo.spring.io/libs-snapshot' }
+	maven { url 'https://repo.spring.io/libs-snapshot' }
 	mavenCentral()
 }
 ```
 
-You should then be able to import a `BUILD-SNAPSHOT` version of the BOM, like `Californium-BUILD-SNAPSHOT`.
+You should then be able to import a `BUILD-SNAPSHOT` version of the BOM, like `Dysprosium-BUILD-SNAPSHOT`.
 
 # Reactive Streams Commons
 In a continuous mission to design the most efficient concurrency operators for Reactive Streams, a common effort -codename [Reactive Streams Commons](https://github.com/reactor/reactive-streams-commons)- has begun. Reactor is fully aligned with _RSC_ design and is directly inlining _RSC_ within its stable API contract scoped under reactor-core. Reactive Streams Commons is a research effort shared with everyone and is demanding of efficient stream processing challengers, therefore it is naturally decoupled of any framework noise.
 
-_Sponsored by [Pivotal](http://pivotal.io)_
+_Sponsored by [Pivotal](https://pivotal.io)_
